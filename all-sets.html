@@ -84,11 +84,11 @@
 			<div>CARDS</div>
 		</div>
 	
-		<a href="/sets/2HU" class="set-row"> 
-			<img src="/sets/2HU-files/icon.png">
-			<div class="set-title">Universes Beyond: The Touhou Project</div>
-			<div>2HU</div>
-			<div>318</div>
+		<a href="/sets/NJB" class="set-row"> 
+			<img src="/sets/NJB-files/icon.png">
+			<div class="set-title">Nangjiao in Bloom</div>
+			<div>NJB</div>
+			<div>317</div>
 		</a>
 		
 		</div>
@@ -98,10 +98,10 @@
 		let displayStyle = "";
 
 		document.addEventListener("DOMContentLoaded", async function () {
-			await fetch('/lists/all-cards.txt')
-					.then(response => response.text())
-					.then(text => {
-						card_list_stringified = text;
+			await fetch('/lists/all-cards.json')
+					.then(response => response.json())
+					.then(json => {
+						card_list = json;
 				}).catch(error => console.error('Error:', error));
 
 				await fetch('/resources/replacechars.txt')
@@ -110,12 +110,7 @@
 						specialchars = text; 
 				}).catch(error => console.error('Error:', error));
 
-				card_list_arrayified = card_list_stringified.split('\\n');
-
-				for (let i = 0; i < card_list_arrayified.length; i++)
-				{
-					card_list_arrayified[i] = card_list_arrayified[i].split('\t');
-				}
+				card_list_arrayified = card_list.cards;
 
 		});
 
@@ -136,13 +131,13 @@
 
 		function randomCard() {
 				let i = Math.floor(Math.random() * (card_list_arrayified.length + 1));
-				let card_name = card_list_arrayified[i][0];
+				let card_name = card_list_arrayified[i].card_name;
 				for (const char of specialchars)
 				{
 					card_name = card_name.replaceAll(char, "");
 				}
 
-				window.location = ('/cards/' + card_list_arrayified[i][11] + '/' + card_list_arrayified[i][4] + '_' + card_name);
+				window.location = ('/cards/' + card_list_arrayified[i].set + '/' + card_list_arrayified[i].number + '_' + card_name);
 			}
 	</script>
 </body>
