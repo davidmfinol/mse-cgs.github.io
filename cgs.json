@@ -1,5 +1,6 @@
 ﻿{
     "allCardsUrl": "https://mse-cgs.github.io/lists/all-cards.json",
+    "allSetsUrl": "https://mse-cgs.github.io/lists/all-sets.json",
     "autoUpdateUrl": "https://mse-cgs.github.io/cgs.json",
     "bannerImageUrl": "https://mse-cgs.github.io/img/banner.png",
     "cardBackImageUrl": "https://mse-cgs.github.io/img/card_back.png",

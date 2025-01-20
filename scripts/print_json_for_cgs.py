@@ -5,6 +5,7 @@ def generateJSON(username):
 	cgs = {}
 
 	cgs["allCardsUrl"] = f"https://{username}.github.io/lists/all-cards.json"
+	cgs["allSetsUrl"] = f"https://{username}.github.io/lists/all-sets.json"
 	cgs["autoUpdateUrl"] = f"https://{username}.github.io/cgs.json"
 	cgs["bannerImageUrl"] = f"https://{username}.github.io/img/banner.png"
 	cgs["cardBackImageUrl"] = f"https://{username}.github.io/img/card_back.png"

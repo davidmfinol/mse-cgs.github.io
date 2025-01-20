@@ -2,7 +2,7 @@ import os
 import sys
 import json
 
-def generateHTML(set_codes):
+def generateHTML(set_codes, username):
 	output_html_file = "index.html"
 
 	# Start creating the HTML file content
@@ -376,7 +376,7 @@ def generateHTML(set_codes):
 			}
 
 			function playOnCGS() {
-				window.open("https://cgs.gg/?url=https%3A%2F%2Fmse-cgs.github.io%2Fcgs.json", '_blank').focus();
+				window.open("https://cgs.gg/?url=https%3A%2F%2F''' + username + '''.github.io%2Fcgs.json", '_blank').focus();
 			}
 
 			function search() {
