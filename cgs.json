@@ -97,6 +97,15 @@
                 "R": "Red",
                 "G": "Green"
             }
+        },
+        {
+            "property": "rarity",
+            "values": {
+                "common": "Common",
+                "uncommon": "Uncommon",
+                "rare": "Rare",
+                "mythic": "Mythic Rare"
+            }
         }
     ],
     "gameDefaultCardAction": "tap",
