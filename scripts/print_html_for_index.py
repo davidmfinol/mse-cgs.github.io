@@ -205,6 +205,7 @@ def generateHTML(set_codes):
 			<div class="button-grid">
 				<button onclick="goToSets()"><img src="/img/sets.png" class="btn-img">All Sets</button>
 				<button onclick="randomCard()"><img src="/img/random.png" class="btn-img">Random Card</button>
+				<button onclick="playOnCgs()"><img src="/img/cgs.png" class="btn-img">Play on CGS</button>
 			</div>
 			<div class="two-part-grid">
 				<div class="container" id="preview-container">
@@ -371,6 +372,10 @@ def generateHTML(set_codes):
 			}
 
 			function goToSets() {
+				window.location = ("/all-sets");
+			}
+
+			function playOnCGS() {
 				window.location = ("/all-sets");
 			}
 
