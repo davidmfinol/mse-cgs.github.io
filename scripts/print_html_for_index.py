@@ -100,7 +100,7 @@ def generateHTML(set_codes):
 	.button-grid {
 		display: grid;
 		margin: auto;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
 		padding-top: 10px;
 		padding-bottom: 20px;
