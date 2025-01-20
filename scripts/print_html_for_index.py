@@ -376,7 +376,7 @@ def generateHTML(set_codes):
 			}
 
 			function playOnCGS() {
-				window.location = ("/all-sets");
+				window.open("https://cgs.gg/?url=https%3A%2F%2Fmse-cgs.github.io%2Fcgs.json", '_blank').focus();
 			}
 
 			function search() {

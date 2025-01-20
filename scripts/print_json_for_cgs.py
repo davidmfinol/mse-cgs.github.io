@@ -3,7 +3,7 @@ import json
 def generateJSON(username):
 	output_json_file = "cgs.json"
 	cgs = {}
-	
+
 	cgs["allCardsUrl"] = f"https://{username}.github.io/lists/all-cards.json"
 	cgs["autoUpdateUrl"] = f"https://{username}.github.io/cgs.json"
 	cgs["bannerImageUrl"] = f"https://{username}.github.io/img/banner.png"
@@ -42,7 +42,7 @@ def generateJSON(username):
 			"name": "color_identity",
 			"delimiter": "",
 			"display": "Color Identity",
-      		"displayEmpty": "Colorless",
+			"displayEmpty": "Colorless",
 			"type": "stringEnumList"
 		},
 		{
@@ -104,6 +104,15 @@ def generateJSON(username):
 				"B": "Black",
 				"R": "Red",
 				"G": "Green"
+			}
+		},
+		{
+			"property": "rarity",
+			"values": {
+				"common": "Common",
+				"uncommon": "Uncommon",
+				"rare": "Rare",
+				"mythic": "Mythic Rare"
 			}
 		}
 	]
