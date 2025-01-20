@@ -32,17 +32,12 @@ def genAllCards(codes):
 					card['type2'] = card['type2'].replace('—', '–')
 					card['rules_text2'] = card['rules_text2'].replace('—', '–')
 					card['special_text2'] = card['special_text2'].replace('—', '–')
+				#CGS: Requires card id
 				card['card_id'] = card['set'] + '-' + str(card['number'])
+				#CGS: Requires image path
 				token = "t" if "token" in str(card['shape']) else ""
-				card_name = card['card_name']
-				card_name_cleaned = card_name
-				card_type = card['type']
-				with open(os.path.join('resources', 'replacechars.txt'), encoding='utf-8-sig') as f:
-					chars = f.read()
-				for char in chars:
-					card_name_cleaned = card_name_cleaned.replace(char, '')
 				double = "_front" if "double" in str(card['shape']) else ""
-				card['image_path'] = "/sets/" + str(card['set']) + "-files/img/" + str(card['number']) + token + "_" + card_name_cleaned + double + ".png"
+				card['image_path'] = "/sets/" + str(card['set']) + "-files/img/" + str(card['number']) + token + "_" + str(card['card_name']) + double + ".png"
 				file_input['cards'].append(card)
 	#F: opens a path,
 	with open(os.path.join('lists', 'all-cards.json'), 'w', encoding='utf-8-sig') as f:
@@ -70,6 +65,10 @@ genAllCards(set_codes)
 if os.path.isdir('cards'):
 	shutil.rmtree('cards')
 os.mkdir('cards')
+
+#CGS: Assumes USERNAME.github.io
+repo_name = os.path.basename(os.getcwd())
+username = repo_name.split('.')[0]
 
 #F: iterate over set codes again
 for code in set_codes:
@@ -104,8 +103,8 @@ for code in set_codes:
 
 	#F: more important functions
 	if not os.path.exists(os.path.join('sets', code + '-files', 'ignore.txt')):
-		print_html_for_spoiler.generateHTML(code, set_codes)
-	print_html_for_set.generateHTML(code)
+		print_html_for_spoiler.generateHTML(code, set_codes, username)
+	print_html_for_set.generateHTML(code, username)
 
 #F: grab lists/all-cards.txt & read it
 with open(os.path.join('lists', 'all-cards.json'), encoding='utf-8-sig') as f:
@@ -123,7 +122,7 @@ for card in card_array:
 	with open(os.path.join('cards', card['set'], str(card['number']) + '_' + card_name + '.json'), 'w', encoding='utf-8-sig') as f:
 		json.dump(card, f)
 	#F: and then generate the html file for the card
-	print_html_for_card.generateHTML(card)
+	print_html_for_card.generateHTML(card, username)
 print(f"HTML card files saved as cards/<set>/<card>.html")
 
 custom_img_dir = os.path.join('custom', 'img')
@@ -134,13 +133,10 @@ if os.path.isdir(custom_img_dir):
 		shutil.copy(filepath, destination)
 		print(filepath + ' added')
 
-print_html_for_sets_page.generateHTML(set_codes)
-print_html_for_search.generateHTML(set_codes)
-print_html_for_index.generateHTML(set_codes)
+print_html_for_sets_page.generateHTML(set_codes, username)
+print_html_for_search.generateHTML(set_codes, username)
+print_html_for_index.generateHTML(set_codes, username)
 
-repo_name = os.path.basename(os.getcwd())
-username = repo_name.split('.')[0]
 print_json_for_cgs.generateJSON(username)
-
 
 
