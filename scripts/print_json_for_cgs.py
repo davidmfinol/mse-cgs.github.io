@@ -10,7 +10,7 @@ def generateJSON(username):
 	cgs["cardBackImageUrl"] = f"https://{username}.github.io/img/card_back.png"
 	cgs["cardDataIdentifier"] = "cards"
 	cgs["cardIdIdentifier"] = "card_id"
-	cgs["cardImageUrl"] = f"https://{username}.github.io"+"/sets/{cardSet}-files/img/{card.number}_{cardName}.png"
+	cgs["cardImageUrl"] = f"https://{username}.github.io"+"{image_path}"
 	cgs["cardNameIdentifier"] = "card_name"
 	cgs["cardSetIdentifier"] = "set"
 	cgs["cardPrimaryProperty"] = "rules_text"
@@ -78,6 +78,11 @@ def generateJSON(username):
 		{
 			"name": "notes",
 			"display": "Notes",
+			"type": "string"
+		},
+		{
+			"name": "image_path",
+			"display": "Image Path",
 			"type": "string"
 		}
 	]

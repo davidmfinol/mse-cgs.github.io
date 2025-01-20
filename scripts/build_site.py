@@ -25,7 +25,6 @@ def genAllCards(codes):
 			#F: puts its card data into a temp dictionary,
 			raw = json.load(f)
 			for card in raw['cards']:
-				card['card_id'] = card['set'] + '-' + str(card['number'])
 				card['type'] = card['type'].replace('—', '–')
 				card['rules_text'] = card['rules_text'].replace('—', '–')
 				card['special_text'] = card['special_text'].replace('—', '–')
@@ -33,6 +32,17 @@ def genAllCards(codes):
 					card['type2'] = card['type2'].replace('—', '–')
 					card['rules_text2'] = card['rules_text2'].replace('—', '–')
 					card['special_text2'] = card['special_text2'].replace('—', '–')
+				card['card_id'] = card['set'] + '-' + str(card['number'])
+				token = "t" if "token" in str(card['shape']) else ""
+				card_name = card['card_name']
+				card_name_cleaned = card_name
+				card_type = card['type']
+				with open(os.path.join('resources', 'replacechars.txt'), encoding='utf-8-sig') as f:
+					chars = f.read()
+				for char in chars:
+					card_name_cleaned = card_name_cleaned.replace(char, '')
+				double = "_front" if "double" in str(card['shape']) else ""
+				card['image_path'] = "/sets/" + str(card['set']) + "-files/img/" + str(card['number']) + token + "_" + card_name_cleaned + double + ".png"
 				file_input['cards'].append(card)
 	#F: opens a path,
 	with open(os.path.join('lists', 'all-cards.json'), 'w', encoding='utf-8-sig') as f:

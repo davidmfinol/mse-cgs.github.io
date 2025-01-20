@@ -5,7 +5,7 @@
     "cardBackImageUrl": "https://mse-cgs.github.io/img/card_back.png",
     "cardDataIdentifier": "cards",
     "cardIdIdentifier": "card_id",
-    "cardImageUrl": "https://mse-cgs.github.io/sets/{cardSet}-files/img/{card.number}_{cardName}.png",
+    "cardImageUrl": "https://mse-cgs.github.io{image_path}",
     "cardNameIdentifier": "card_name",
     "cardSetIdentifier": "set",
     "cardPrimaryProperty": "rules_text",
@@ -72,6 +72,11 @@
         {
             "name": "notes",
             "display": "Notes",
+            "type": "string"
+        },
+        {
+            "name": "image_path",
+            "display": "Image Path",
             "type": "string"
         }
     ],
