@@ -12,6 +12,7 @@ import print_html_for_spoiler
 import print_html_for_card
 import print_html_for_set
 import print_html_for_sets_page
+import print_json_for_cgs
 
 #F = Fungustober's notes
 
@@ -24,6 +25,7 @@ def genAllCards(codes):
 			#F: puts its card data into a temp dictionary,
 			raw = json.load(f)
 			for card in raw['cards']:
+				card['card_id'] = card['set'] + '-' + str(card['number'])
 				card['type'] = card['type'].replace('—', '–')
 				card['rules_text'] = card['rules_text'].replace('—', '–')
 				card['special_text'] = card['special_text'].replace('—', '–')
@@ -126,9 +128,9 @@ print_html_for_sets_page.generateHTML(set_codes)
 print_html_for_search.generateHTML(set_codes)
 print_html_for_index.generateHTML(set_codes)
 
-
-
-
+repo_name = os.path.basename(os.getcwd())
+username = repo_name.split('.')[0]
+print_json_for_cgs.generateJSON(username)
 
 
 
