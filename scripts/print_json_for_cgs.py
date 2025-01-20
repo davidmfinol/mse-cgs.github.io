@@ -93,7 +93,7 @@ def generateJSON(username):
 
 	cgs["enums"] = [
 		{
-			"property": "colors",
+			"property": "color",
 			"values": {
 				"W": "White",
 				"U": "Blue",
