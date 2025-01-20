@@ -375,7 +375,7 @@ def generateHTML(set_codes, username):
 				window.location = ("/all-sets");
 			}
 
-			function playOnCGS() {
+			function playOnCgs() {
 				window.open("https://cgs.gg/?url=https%3A%2F%2F''' + username + '''.github.io%2Fcgs.json", '_blank').focus();
 			}
 
