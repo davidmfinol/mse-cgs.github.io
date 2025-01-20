@@ -91,12 +91,15 @@ def generateHTML(codes, username):
 		</div>
 	'''
 
-	#CGS: Requires Set Names in all-sets.json
-	set_names = {}
+	#CGS: Requires set names in all-sets.json
+	sets = []
 	for code in codes:
 		with open(os.path.join('sets', code + '-files', code + '-fullname.txt'), encoding='utf-8-sig') as f:
 			set_name = f.read()
-		set_names[code] = set_name
+		set_obj = {}
+		set_obj['code'] = code
+		set_obj['name'] = set_name
+		sets.append(set_obj)
 		html_content += '''
 		<a href="/sets/''' + code + '''" class="set-row"> 
 			<img src="/sets/''' + code + '''-files/icon.png">
@@ -106,7 +109,7 @@ def generateHTML(codes, username):
 		</a>
 		'''
 	with open(os.path.join('lists', 'all-sets.json'), 'w', encoding='utf-8-sig') as f:
-		json.dump(set_names, f)
+		json.dump(sets, f)
 
 	html_content += '''
 		</div>
