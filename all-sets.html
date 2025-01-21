@@ -7,8 +7,12 @@
 	</head>
 	<style>
 		@font-face {
-		  font-family: Beleren;
-		  src: url('/resources/beleren.ttf');
+			font-family: 'Beleren Small Caps';
+			src: url('/resources/beleren-caps.ttf');
+		}
+		@font-face {
+			font-family: Beleren;
+			src: url('/resources/beleren.ttf');
 		}
 		body {
 			font-family: 'Helvetica', 'Arial', sans-serif;
@@ -16,6 +20,7 @@
 			margin: 0px;
 			background-color: #f3f3f3;
 			font-size: 20px;
+			padding-bottom: 30px;
 		}
 		a {
 			text-decoration: none;
@@ -26,8 +31,7 @@
 			max-width: 1000px;
 			display: grid;
 			grid-template-columns: 1fr;
-			padding-top: 50px;
-			padding-bottom: 40px;
+			padding-top: 20px;
 			margin: auto;
 		}
 		.set-header-row {
@@ -65,6 +69,12 @@
 			letter-spacing: .02em;
 			font-size: 22px;
 		}
+		.set-group {
+			font-family: Beleren Small Caps;
+			text-align: center;
+			font-size: 40px;
+			padding-top: 20px;
+		}
 	</style>
 	<body>
 		<div class="header">
@@ -73,26 +83,28 @@
 			<img class="sg-icon" src="/img/search.png">
 			<input type="text" inputmode="search" placeholder="Search ..." name="search" id="search" spellcheck="false" autocomplete="off" autocorrect="off" spellcheck="false">
 			<a href="/all-sets"><img src="/img/sets.png" class="sg-icon">Sets</a>
+			<a href="/deckbuilder"><img src="/img/deck.png" class="sg-icon">Deckbuilder</a>
 			<a onclick="randomCard()"><img src="/img/random.png" class="sg-icon">Random</a>
 			<a href="https://cgs.gg/?url=https%3A%2F%2Fmse-cgs.github.io%2Fcgs.json" target="_blank"><img src="/img/cgs.png" class="sg-icon">Play</a>
 		</div>
-	</div>
-		<div class="set-table">
-		<div class="set-header-row">
-			<div></div> <!-- empty div for spacing -->
-			<div>NAME</div>
-			<div>CODE</div>
-			<div>CARDS</div>
-		</div>
-	
-		<a href="/sets/NJB" class="set-row"> 
-			<img src="/sets/NJB-files/icon.png">
-			<div class="set-title">Nangjiao in Bloom</div>
-			<div>NJB</div>
-			<div>317</div>
-		</a>
+	</div>			<div class="set-group"></div>
 		
-		</div>
+			<div class="set-table">
+			<div class="set-header-row">
+				<div></div> <!-- empty div for spacing -->
+				<div>NAME</div>
+				<div>CODE</div>
+				<div>CARDS</div>
+			</div>
+		
+			<a href="/sets/NJB" class="set-row"> 
+				<img src="/sets/NJB-files/icon.png">
+				<div class="set-title">Nangjiao in Bloom</div>
+				<div>NJB</div>
+				<div>277</div>
+			</a>
+			</div>
+		
 	<script>
 		let card_list_arrayified = [];
 		let specialchars = "";

@@ -78,8 +78,7 @@
 		margin: 0;
 	}
 	.container p {
-		padding-top: 11px;
-		padding-bottom: 16px;
+		padding: 11px 0px;
 	}
 	.preview-container {
 		display: grid;
@@ -87,7 +86,14 @@
 		gap: 2px;
 		justify-items: center;
 		align-items: center;
-		padding-bottom: 20px;
+		padding-bottom: 10px;
+	}
+	.set-group {
+		font-family: Beleren Small Caps;
+		font-size: 18px;
+		width: 100%;
+		margin-bottom: 10px;
+		border-bottom: 2px solid #171717;
 	}
 	.button-grid {
 		display: grid;
@@ -161,6 +167,7 @@
 	.set-icon-container a {
 		text-decoration: none;
 		color: #171717;
+		height: 100%;
 	}
 	.set-icon {
 		height: 60px;
@@ -172,7 +179,8 @@
 		width: 60px;
 	}
 	.set-icon-name {
-		height: 30px;
+		min-height: 30px;
+		height: 100%;
 	}
 	@media ( max-width: 750px ) {
 		.item-container {
@@ -196,18 +204,21 @@
 			<input type="text" inputmode="search" placeholder="Search ..." autofocus="autofocus" name="search" id="search" spellcheck="false" autocomplete="off" autocorrext="off" spellcheck="false">
 			<div class="button-grid">
 				<button onclick="goToSets()"><img src="/img/sets.png" class="btn-img">All Sets</button>
+				<button onclick="goToDeckbuilder()"><img src="/img/deck.png" class="btn-img">Deckbuilder</button>
 				<button onclick="randomCard()"><img src="/img/random.png" class="btn-img">Random Card</button>
 				<button onclick="playOnCgs()"><img src="/img/cgs.png" class="btn-img">Play on CGS</button>
 			</div>
 			<div class="two-part-grid">
 				<div class="container" id="preview-container">
 					<p>Preview Galleries</p>
-					<div class="preview-container">
-					<div class="set-icon-container">
-								<a href="NJB-spoiler"><div class="set-icon"><img src="sets/NJB-files/icon.png" title="Nangjiao in Bloom"></img></div>
-								<div class="set-icon-name">Nangjiao in Bloom</div></a>
-							</div>
-							</div>
+										<div class="set-group"></div>
+							<div class="preview-container">
+		<div class="set-icon-container">
+									<a href="NJB-spoiler"><div class="set-icon"><img src="sets/NJB-files/icon.png" title="Nangjiao in Bloom"></img></div>
+									<div class="set-icon-name">Nangjiao in Bloom</div></a>
+								</div>
+									</div>
+		
 				</div>
 				<div class="card-container" id="cotd-image">
 					<p>Card of the Day</p>
@@ -368,6 +379,10 @@
 
 			function playOnCgs() {
 				window.open("https://cgs.gg/?url=https%3A%2F%2Fmse-cgs.github.io%2Fcgs.json", '_blank').focus();
+			}
+				
+			function goToDeckbuilder() {
+				window.location = ("/deckbuilder");
 			}
 
 			function search() {

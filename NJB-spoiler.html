@@ -100,17 +100,15 @@
 			cursor: pointer;
 			border: none;
 			position: absolute;
-			top: 6.5%;
-			left: 8.5%;
+			left: 50%;
+			top: 48%;
 			transform: translate(-50%, -50%);
+			opacity: 0.5;
 		}
 		.flip-btn:hover {
 			background: url('img/flip-hover.png') no-repeat;
 			background-size: contain;
 			background-position: center;
-		}
-		.sidebar .flip-btn {
-			transform: translate(-50%, -85%);
 		}
 		.icon-bar {
 			display: grid;
@@ -161,6 +159,7 @@
 			<img class="sg-icon" src="/img/search.png">
 			<input type="text" inputmode="search" placeholder="Search ..." name="search" id="search" spellcheck="false" autocomplete="off" autocorrect="off" spellcheck="false">
 			<a href="/all-sets"><img src="/img/sets.png" class="sg-icon">Sets</a>
+			<a href="/deckbuilder"><img src="/img/deck.png" class="sg-icon">Deckbuilder</a>
 			<a onclick="randomCard()"><img src="/img/random.png" class="sg-icon">Random</a>
 			<a href="https://cgs.gg/?url=https%3A%2F%2Fmse-cgs.github.io%2Fcgs.json" target="_blank"><img src="/img/cgs.png" class="sg-icon">Play</a>
 		</div>
@@ -380,11 +379,11 @@
 			<div class="container"><img alt="sets\NJB-files\img\122_Yenzu Disciple.png" id="122" data-flag="@X" onclick="openSidebar('122')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\164_Warlord of Wun Su.png" id="164" data-flag="@X" onclick="openSidebar('164')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\202_Vinehorn Stag.png" id="202" data-flag="@X" onclick="openSidebar('202')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\246_Wang Xi, Wishes on the Wind.png" id="246" data-flag="@X" onclick="openSidebar('246')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\225_Kiyoko of the Silver Mist.png" id="225" data-flag="@X" onclick="openSidebar('225')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\244_Swiftblade Ren.png" id="244" data-flag="@X" onclick="openSidebar('244')"></div>
@@ -405,11 +404,11 @@
 			<div class="container"><img alt="sets\NJB-files\img\210_Blackblood Feaster.png" id="210" data-flag="@X" onclick="openSidebar('210')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\248_Wilderkin Zealot.png" id="248" data-flag="@X" onclick="openSidebar('248')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\224_Kanghyae Forum.png" id="224" data-flag="@X" onclick="openSidebar('224')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\255_Zou Meili, Cruel Justice.png" id="255" data-flag="@X" onclick="openSidebar('255')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\247_Wei Ji, Life's Rhythm.png" id="247" data-flag="@X" onclick="openSidebar('247')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\220_Gui, the Brinebearer.png" id="220" data-flag="@X" onclick="openSidebar('220')"></div>
@@ -430,26 +429,31 @@
 			<div class="container"><img alt="sets\NJB-files\img\236_Peacetime Murals.png" id="236" data-flag="@X" onclick="openSidebar('236')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\243_Song of Wind and Fire.png" id="243" data-flag="@X" onclick="openSidebar('243')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\241_Seto's Private Collection.png" id="241" data-flag="@X" onclick="openSidebar('241')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\212_Cheng, Wild Tyrant.png" id="212" data-flag="@X" onclick="openSidebar('212')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\213_Cou Ling of the Lunar Den.png" id="213" data-flag="@X" onclick="openSidebar('213')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\215_Emperor Dan Te Mogui.png" id="215" data-flag="@X" onclick="openSidebar('215')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\251_Ya'Ling, the Rune-Drake.png" id="251" data-flag="@X" onclick="openSidebar('251')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\217_Fang Luo, the Astral Tide.png" id="217" data-flag="@X" onclick="openSidebar('217')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\223_Kai'Oro, Grave Betrayer.png" id="223" data-flag="@X" onclick="openSidebar('223')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\231_The Mythical Zhiwu.png" id="231" data-flag="@X" onclick="openSidebar('231')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\233_Oshu of the Bosk.png" id="233" data-flag="@X" onclick="openSidebar('233')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\249_Wun Su, War's Muse.png" id="249" data-flag="@X" onclick="openSidebar('249')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\251_Ya'Ling, the Rune-Drake.png" id="251" data-flag="@X" onclick="openSidebar('251')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\212_Cheng, Wild Tyrant.png" id="212" data-flag="@X" onclick="openSidebar('212')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\254_Zihao, Song of the Glade.png" id="254" data-flag="@X" onclick="openSidebar('254')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\249_Wun Su, War's Muse.png" id="249" data-flag="@X" onclick="openSidebar('249')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\233_Oshu of the Bosk.png" id="233" data-flag="@X" onclick="openSidebar('233')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\231_The Mythical Zhiwu.png" id="231" data-flag="@X" onclick="openSidebar('231')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\213_Cou Ling of the Lunar Den.png" id="213" data-flag="@X" onclick="openSidebar('213')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\215_Emperor Dan Te Mogui.png" id="215" data-flag="@X" onclick="openSidebar('215')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\257_Duan's Aeriform Ribbons.png" id="257" data-flag="@X" onclick="openSidebar('257')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\262_Xueyang San.png" id="262" data-flag="@X" onclick="openSidebar('262')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\256_Dignitary's Rickshaw.png" id="256" data-flag="@X" onclick="openSidebar('256')"></div>
@@ -458,38 +462,48 @@
 			<div class="container"><img alt="sets\NJB-files\img\260_Processional Junk.png" id="260" data-flag="@X" onclick="openSidebar('260')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\261_Prophetic Prismite.png" id="261" data-flag="@X" onclick="openSidebar('261')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\263_Yenzu Ritual Vessel.png" id="263" data-flag="@X" onclick="openSidebar('263')"></div>
-			<div class="container"><img alt="img\e.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\e.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
+			<div class="container"><img alt="img\e.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\e.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\275_Tranquil Cove.png" id="275" data-flag="@X" onclick="openSidebar('275')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\266_Dismal Backwater.png" id="266" data-flag="@X" onclick="openSidebar('266')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\264_Bloodfell Caves.png" id="264" data-flag="@X" onclick="openSidebar('264')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\270_Rugged Highlands.png" id="270" data-flag="@X" onclick="openSidebar('270')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\265_Blossoming Sands.png" id="265" data-flag="@X" onclick="openSidebar('265')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\271_Scoured Barrens.png" id="271" data-flag="@X" onclick="openSidebar('271')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\268_Jungle Hollow.png" id="268" data-flag="@X" onclick="openSidebar('268')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\274_Thornwood Falls.png" id="274" data-flag="@X" onclick="openSidebar('274')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\273_Swiftwater Cliffs.png" id="273" data-flag="@X" onclick="openSidebar('273')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\277_Wind-Scarred Crag.png" id="277" data-flag="@X" onclick="openSidebar('277')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\269_The Orange Orchard.png" id="269" data-flag="@X" onclick="openSidebar('269')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\272_Shrine of Elder Lords.png" id="272" data-flag="@X" onclick="openSidebar('272')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\267_Festival Centrum.png" id="267" data-flag="@X" onclick="openSidebar('267')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\276_Warped Landscape.png" id="276" data-flag="@X" onclick="openSidebar('276')"></div>
-			<div class="container"><img alt="img\e.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
+			<div class="container"><img alt="img\e.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\278_Plains.png" id="278" data-flag="@X" onclick="openSidebar('278')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\282_Island.png" id="282" data-flag="@X" onclick="openSidebar('282')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\286_Swamp.png" id="286" data-flag="@X" onclick="openSidebar('286')"></div>
@@ -510,31 +524,31 @@
 			<div class="container"><img alt="sets\NJB-files\img\289_Swamp.png" id="289" data-flag="@X" onclick="openSidebar('289')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\293_Mountain.png" id="293" data-flag="@X" onclick="openSidebar('293')"></div>
 			<div class="container"><img alt="sets\NJB-files\img\297_Forest.png" id="297" data-flag="@X" onclick="openSidebar('297')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="img\er.png" id="-1" data-flag="@E" onclick="openSidebar('-1')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\1t_Spirit.png" id="1" data-flag="@X" onclick="openSidebar('1')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\2t_Bird.png" id="2" data-flag="@X" onclick="openSidebar('2')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\3t_Hu Li.png" id="3" data-flag="@X" onclick="openSidebar('3')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\4t_Warrior.png" id="4" data-flag="@X" onclick="openSidebar('4')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\5t_Drake.png" id="5" data-flag="@X" onclick="openSidebar('5')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\6t_Kraken.png" id="6" data-flag="@X" onclick="openSidebar('6')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\7t_Cultist.png" id="7" data-flag="@X" onclick="openSidebar('7')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\8t_Demon.png" id="8" data-flag="@X" onclick="openSidebar('8')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\9t_Bard.png" id="9" data-flag="@X" onclick="openSidebar('9')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\10t_Dragon.png" id="10" data-flag="@X" onclick="openSidebar('10')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\11t_Panda.png" id="11" data-flag="@X" onclick="openSidebar('11')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\12t_Beast.png" id="12" data-flag="@X" onclick="openSidebar('12')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\13t_Hydra.png" id="13" data-flag="@X" onclick="openSidebar('13')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\14t_Panda Bear Monk.png" id="14" data-flag="@X" onclick="openSidebar('14')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\15t_Plant.png" id="15" data-flag="@X" onclick="openSidebar('15')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\16t_Shimaru, the Unfading.png" id="16" data-flag="@X" onclick="openSidebar('16')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\17t_Wurm.png" id="17" data-flag="@X" onclick="openSidebar('17')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\18t_Fox.png" id="18" data-flag="@X" onclick="openSidebar('18')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\19t_Idol.png" id="19" data-flag="@X" onclick="openSidebar('19')"></div>
-			<div class="container"><img alt="sets\NJB-files\img\20t_Treasure.png" id="20" data-flag="@X" onclick="openSidebar('20')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\1t_Spirit.png" id="1t" data-flag="@X" onclick="openSidebar('1t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\2t_Bird.png" id="2t" data-flag="@X" onclick="openSidebar('2t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\3t_Hu Li.png" id="3t" data-flag="@X" onclick="openSidebar('3t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\4t_Warrior.png" id="4t" data-flag="@X" onclick="openSidebar('4t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\5t_Drake.png" id="5t" data-flag="@X" onclick="openSidebar('5t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\6t_Kraken.png" id="6t" data-flag="@X" onclick="openSidebar('6t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\7t_Cultist.png" id="7t" data-flag="@X" onclick="openSidebar('7t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\8t_Demon.png" id="8t" data-flag="@X" onclick="openSidebar('8t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\9t_Bard.png" id="9t" data-flag="@X" onclick="openSidebar('9t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\10t_Dragon.png" id="10t" data-flag="@X" onclick="openSidebar('10t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\11t_Panda.png" id="11t" data-flag="@X" onclick="openSidebar('11t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\12t_Beast.png" id="12t" data-flag="@X" onclick="openSidebar('12t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\13t_Hydra.png" id="13t" data-flag="@X" onclick="openSidebar('13t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\14t_Panda Bear Monk.png" id="14t" data-flag="@X" onclick="openSidebar('14t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\15t_Plant.png" id="15t" data-flag="@X" onclick="openSidebar('15t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\16t_Shimaru, the Unfading.png" id="16t" data-flag="@X" onclick="openSidebar('16t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\17t_Wurm.png" id="17t" data-flag="@X" onclick="openSidebar('17t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\18t_Fox.png" id="18t" data-flag="@X" onclick="openSidebar('18t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\19t_Idol.png" id="19t" data-flag="@X" onclick="openSidebar('19t')"></div>
+			<div class="container"><img alt="sets\NJB-files\img\20t_Treasure.png" id="20t" data-flag="@X" onclick="openSidebar('20t')"></div>
 	</div>
 </div>
 	<div class="sidebar" id="sidebar">

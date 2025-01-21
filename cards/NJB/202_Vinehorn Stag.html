@@ -1,7 +1,7 @@
 ﻿<html>
 <head>
   <title>Vinehorn Stag</title>
-  <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/sets/NJB-files/icon.png">
   <link rel="stylesheet" href="/resources/mana.css">
   <link rel="stylesheet" href="/resources/header.css">
 </head>
@@ -107,6 +107,9 @@
 		font-weight: bold;
 		padding-bottom: 0px;
 	}
+	.printings {
+		display: none;
+	}
 	.printings a {
 		color: #1338be;
 		text-decoration: none;
@@ -131,22 +134,15 @@
 		cursor: pointer;
 		border: none;
 		position: absolute;
-		top: 6.5%;
-		left: 8.5%;
-		transform: translate(-50%, -85%);
+		left: 50%;
+		top: 48%;
+		transform: translate(-50%, -50%);
+		opacity: 0.5;
 	}
 	.img-container .btn:hover {
 		background: url('/img/flip-hover.png') no-repeat;
 		background-size: contain;
 		background-position: center;
-		width: 15%;
-		height: 11%;
-		cursor: pointer;
-		border: none;
-		position: absolute;
-		top: 6.5%;
-		left: 8.5%;
-		transform: translate(-50%, -85%);
 	}
 	.hidden {
 		display: none;
@@ -159,6 +155,7 @@
 			<img class="sg-icon" src="/img/search.png">
 			<input type="text" inputmode="search" placeholder="Search ..." name="search" id="search" spellcheck="false" autocomplete="off" autocorrect="off" spellcheck="false">
 			<a href="/all-sets"><img src="/img/sets.png" class="sg-icon">Sets</a>
+			<a href="/deckbuilder"><img src="/img/deck.png" class="sg-icon">Deckbuilder</a>
 			<a onclick="randomCard()"><img src="/img/random.png" class="sg-icon">Random</a>
 			<a href="https://cgs.gg/?url=https%3A%2F%2Fmse-cgs.github.io%2Fcgs.json" target="_blank"><img src="/img/cgs.png" class="sg-icon">Play</a>
 		</div>
@@ -203,7 +200,8 @@
 			document.getElementById("grid").appendChild(gridifyCard(card));
 			if (document.getElementById("other-printings"))
 			{
-				document.getElementById("card-text").appendChild(document.getElementById("other-printings"));			
+				document.getElementById("card-text").appendChild(document.getElementById("other-printings"));
+				document.getElementById("other-printings").style.display = "block";
 			}
 		});
 
