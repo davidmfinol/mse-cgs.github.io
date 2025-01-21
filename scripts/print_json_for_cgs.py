@@ -128,6 +128,8 @@ def generateJSON(username):
 	cgs["gameStartPointsCount"] = 20
 	cgs["name"] = username
 	cgs["rulesUrl"] = f"https://{username}.github.io/"
+	cgs["setCodeIdentifier"] = "set_code"
+	cgs["setNameIdentifier"] = "set_name"
 
 	# Write the JSON content to the output JSON file
 	with open(output_json_file, 'w', encoding='utf-8-sig') as file:
