@@ -117,6 +117,9 @@
     "gameDefaultCardAction": "tap",
     "gameStartHandCount": 7,
     "gameStartPointsCount": 20,
-    "name": "mse-cgs",
-    "rulesUrl": "https://mse-cgs.github.io/"
+    "name": "mse-cgs's MSE HUB",
+    "rulesUrl": "https://mse-cgs.github.io/",
+    "setCodeIdentifier": "set_code",
+    "setDataIdentifier": "sets",
+    "setNameIdentifier": "set_name"
 }
