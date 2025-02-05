@@ -7,6 +7,7 @@
     "cardDataIdentifier": "cards",
     "cardIdIdentifier": "card_id",
     "cardImageUrl": "https://mse-cgs.github.io{image_path}",
+    "cardNameBackIdentifier": "card_name2",
     "cardNameIdentifier": "card_name",
     "cardSetIdentifier": "set",
     "cardPrimaryProperty": "rules_text",
@@ -21,7 +22,9 @@
             "delimiter": "",
             "display": "Color",
             "displayEmpty": "Colorless",
-            "type": "stringEnumList"
+            "type": "stringEnumList",
+            "frontName": "color",
+            "backName": "color2"
         },
         {
             "name": "rarity",
@@ -31,7 +34,9 @@
         {
             "name": "type",
             "display": "Type",
-            "type": "string"
+            "type": "string",
+            "frontName": "type",
+            "backName": "type2"
         },
         {
             "name": "color_identity",
@@ -43,42 +48,51 @@
         {
             "name": "cost",
             "display": "Cost",
-            "type": "string"
+            "type": "string",
+            "frontName": "cost",
+            "backName": "cost2"
         },
         {
             "name": "rules_text",
             "display": "Rules Text",
-            "type": "string"
+            "type": "string",
+            "frontName": "rules_text",
+            "backName": "rules_text2"
         },
         {
             "name": "pt",
             "display": "Power/Toughness",
-            "type": "string"
-        },
-        {
-            "name": "special_text",
-            "display": "Special Text",
-            "type": "string"
-        },
-        {
-            "name": "shape",
-            "display": "Shape",
-            "type": "string"
+            "type": "string",
+            "frontName": "pt",
+            "backName": "pt2"
         },
         {
             "name": "loyalty",
             "display": "Loyalty",
-            "type": "integer"
+            "type": "integer",
+            "frontName": "loyalty",
+            "backName": "loyalty2"
         },
         {
-            "name": "notes",
-            "display": "Notes",
-            "type": "string"
+            "name": "flavor_text",
+            "display": "Flavor Text",
+            "type": "string",
+            "frontName": "flavor_text",
+            "backName": "flavor_text2"
+        },
+        {
+            "name": "artist",
+            "display": "Artist",
+            "type": "string",
+            "frontName": "artist",
+            "backName": "artist2"
         },
         {
             "name": "image_path",
             "display": "Image Path",
-            "type": "string"
+            "type": "string",
+            "frontName": "image_path",
+            "backName": "image_path2"
         }
     ],
     "copyright": "mse-cgs",
