@@ -6,7 +6,7 @@ def generateHTML():
 	output_html_file = "play.html"
 
 	# Start creating the HTML file content
-	html_content = ''''<html>
+	html_content = '''<html>
 <head>
 	<title>Card</title>
 	<link rel="icon" type="image/x-icon" href="/img/favicon.png">
