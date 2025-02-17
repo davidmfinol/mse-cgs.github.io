@@ -410,7 +410,7 @@ def generateHTML(codes):
 			<a href="/all-sets"><img src="/img/sets.png" class="sg-icon">Sets</a>
 			<a href="/deckbuilder"><img src="/img/deck.png" class="sg-icon">Deckbuilder</a>
 			<a onclick="randomCard()"><img src="/img/random.png" class="sg-icon">Random</a>
-			<a href="https://cgs.gg/?url=https%3A%2F%2F''' + os.path.basename(os.getcwd()) + '''%2Fcgs.json" target="_blank"><img src="/img/cgs.png" class="sg-icon">Play</a>
+			<a href="/play"><img src="/img/cgs.png" class="sg-icon">Play</a>
 		</div>
 	</div>
 	<div id="myContextMenu" class="rc-menu">
@@ -818,7 +818,7 @@ def generateHTML(codes):
 
 	html_content += '''
 
-		function gridifyCard(card_stats, card_text = false, rotate_card = false) {
+		function gridifyCard(card_stats, card_text = false, rotate_card = false, designer_notes = false) {
 			const card_name = card_stats.card_name;
 
 			if (!card_text)
@@ -1044,7 +1044,7 @@ def generateHTML(codes):
 							}
 
 							card_img = document.createElement("img");
-							card_img.src = "/sets/" + card_stats.set + "-files/img/" + card_stats.number + "_" + card_stats.card_name + "." + card_stats.image_type;
+							card_img.src = "/sets/" + card_stats.set + "-files/img/" + card_stats.number + "_" + card_stats.card_name + ((card_stats.shape.includes("double")) ? "_front" : "") + "." + card_stats.image_type;
 							card_img.style.cursor = "pointer";
 							card_img.onmouseover = function() {
 								cgc = document.getElementById("card-grid-container");

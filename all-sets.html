@@ -85,7 +85,7 @@
 			<a href="/all-sets"><img src="/img/sets.png" class="sg-icon">Sets</a>
 			<a href="/deckbuilder"><img src="/img/deck.png" class="sg-icon">Deckbuilder</a>
 			<a onclick="randomCard()"><img src="/img/random.png" class="sg-icon">Random</a>
-			<a href="https://cgs.gg/?url=https%3A%2F%2Fmse-cgs.github.io%2Fcgs.json" target="_blank"><img src="/img/cgs.png" class="sg-icon">Play</a>
+			<a href="/play"><img src="/img/cgs.png" class="sg-icon">Play</a>
 		</div>
 	</div>			<div class="set-group"></div>
 		
@@ -146,18 +146,26 @@
 		});
 
 		function search() {
-			window.location = ("/search?search=" + document.getElementById("search").value);
+			const url = new URL('search', window.location.origin);
+			url.searchParams.append('search', document.getElementById("search").value);
+			window.location.href = url;
 		}
 
 		function randomCard() {
 				let i = Math.floor(Math.random() * (card_list_arrayified.length + 1));
-				let card_name = card_list_arrayified[i].card_name;
-				for (const char of specialchars)
-				{
-					card_name = card_name.replaceAll(char, "");
+				let random_card = card_list_arrayified[i];
+
+				const url = new URL('card', window.location.origin);
+				const params = {
+					set: random_card.set,
+					num: random_card.number,
+					name: random_card.card_name
+				}
+				for (const key in params) {
+					url.searchParams.append(key, params[key]);
 				}
 
-				window.location = ('/cards/' + card_list_arrayified[i].set + '/' + card_list_arrayified[i].number + '_' + card_name);
+				window.location.href = url;
 			}
 	</script>
 </body>
