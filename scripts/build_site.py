@@ -13,6 +13,7 @@ import print_html_for_card
 import print_html_for_set
 import print_html_for_sets_page
 import print_html_for_deckbuilder
+import print_html_for_play
 import print_json_for_cgs
 
 import markdown
@@ -154,4 +155,5 @@ print_html_for_sets_page.generateHTML()
 print_html_for_search.generateHTML(set_codes)
 print_html_for_deckbuilder.generateHTML(set_codes)
 print_html_for_index.generateHTML()
+print_html_for_play.generateHTML()
 print_json_for_cgs.generateJSON()
