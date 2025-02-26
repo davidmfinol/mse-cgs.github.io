@@ -27,8 +27,11 @@ def generateHTML():
 		margin: 0px;
 		background-color: #f3f3f3;
 	}
-	.hidden {
-		display: none;
+	.search-grid {
+		justify-content: center;
+	}
+	.sg-icon {
+		cursor: pointer;
 	}
 </style>
 <body>
@@ -104,15 +107,7 @@ def generateHTML():
       // Set this to false if you want to decouple this synchronization from
       // happening inside the engine, and you would instead like to size up
       // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-      }
+       config.matchWebGLToCanvasSize = false;
 
       canvas.style.background = "url('" + buildUrl + "/WebGL.jpg') center / cover";
       loadingBar.style.display = "block";
