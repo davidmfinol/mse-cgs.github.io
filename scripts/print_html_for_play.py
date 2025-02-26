@@ -47,7 +47,7 @@ def generateHTML():
 	</div>
 
     <div id="unity-container">
-      <canvas id="unity-canvas" width=1920 height=1020 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=1920 height=1080 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -107,7 +107,7 @@ def generateHTML():
       // Set this to false if you want to decouple this synchronization from
       // happening inside the engine, and you would instead like to size up
       // the canvas DOM size and WebGL render target sizes yourself.
-       config.matchWebGLToCanvasSize = false;
+       config.matchWebGLToCanvasSize = true;
 
       canvas.style.background = "url('" + buildUrl + "/WebGL.jpg') center / cover";
       loadingBar.style.display = "block";
