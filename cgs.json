@@ -97,6 +97,12 @@
     ],
     "copyright": "mse-cgs",
     "deckSharePreference": "individual",
+    "deckUrls": [
+        {
+            "name": "A Deck",
+            "url": "https://mse-cgs.github.io/A%20Deck.txt"
+        }
+    ],
     "enums": [
         {
             "property": "color",
